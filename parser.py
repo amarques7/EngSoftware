@@ -61,6 +61,3 @@ while (y <= 16):
             for k in x[1]:
                 spamwriter.writerow([',',k])
     y += 1
-    a = int(1)
-    if a:
-        print('foi')
