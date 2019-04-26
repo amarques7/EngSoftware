@@ -22,7 +22,6 @@ while (True):
             
         ]
     }
-
     arq = open(str(y)+'gen.dot', 'r')
     texto2 = arq.readlines()
 
