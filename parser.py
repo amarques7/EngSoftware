@@ -3,6 +3,12 @@
 import re 
 import csv
 y = 1
+
+with open('gen.csv', 'w', newline='') as csvfile:
+        spamwriter = csv.writer(csvfile, delimiter=' ',
+                                quotechar=',', quoting=csv.QUOTE_MINIMAL)
+        spamwriter.writerow(['CHAMADOR', ' CHAMADO']) # escreve st
+
 while (y <= 16):
     print ('entrei no while')
 
@@ -42,22 +48,20 @@ while (y <= 16):
             chamado.append(testedict['Node'][x]['label'])
         testedict['cor'].append(tuple((testedict['Node'][nodes]['label'], chamado)))
 
+    z=int(0) 
     for x in testedict ['cor']:
-        print(x)
-    #print (testedict['cor'])
+        if z < int(1):
+            print(x[0],x[1])
+            z+=1
+#    print (testedict['cor'])
 
     print ("\n ")
-    #salva em .csv
-    with open(str(y)+'gen.csv', 'w', newline='') as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter=' ',
-                                quotechar=',', quoting=csv.QUOTE_MINIMAL)
-        spamwriter.writerow(['CHAMADOR', ' CHAMADO']) # escreve st
-
-    with open(str(y)+'gen.csv', 'a', newline='') as csvfile:
+# salvando no arvivo csv   
+    with open('gen.csv', 'a', newline='') as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=' ',
                             quotechar=' ', quoting=csv.QUOTE_MINIMAL)
         for x in testedict ['cor']:
-            spamwriter.writerow([x[0]]) # escreve strings no csv
             for k in x[1]:
-                spamwriter.writerow([',',k])
+                spamwriter.writerow([x[0],',',k])
+            break
     y += 1
