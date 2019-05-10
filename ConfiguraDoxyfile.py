@@ -8,7 +8,7 @@ import os
 def Doxyfile_alterar_linha(nova_linha_OUTPUT, nova_linha_INPUT ):
 
     path = 'Doxyfile'
-    nova_linha_OUTPUT = 'OUTPUT_DIRECTORY       = '+ nova_linha_OUTPUT
+    nova_linha_OUTPUT = 'OUTPUT_DIRECTORY       = '+ nova_linha_OUTPUT 
     nova_linha_INPUT ='INPUT                  = '+ nova_linha_INPUT
 
     with open(path,'r') as f:
