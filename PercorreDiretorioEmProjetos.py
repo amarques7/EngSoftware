@@ -6,10 +6,12 @@ def leprojet(projetos):
     for projeto in os.listdir(projetos):
         pathprojeto = projetos + '/'+ projeto
         todoscommit.append( pathprojeto)
+    
+  #  print('todoscommit', todoscommit)
     return todoscommit
 
 #        for commit in os.listdir(pathprojeto):
  #           pathcommit= pathprojeto + '\\'+ commit
           #  print(pathcommit)    
 
-#leprojet('C:/Users/amarq/OneDrive/Desktop/testeArquivo')
+#leprojet('C:\Analysis\MPSolve')

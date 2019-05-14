@@ -1,8 +1,8 @@
 import os
 def listardiretorio(path,i):
 
-    print (path)
-    print (i)
+    #print (path)
+    #print (i)
  
     subdir = list()
     #r == root, d == directory, f == file
