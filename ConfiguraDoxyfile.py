@@ -7,10 +7,14 @@ import os
 
 def Doxyfile_alterar_linha(nova_linha_OUTPUT, nova_linha_INPUT ):
 
-    path = 'Doxyfile'
+    print('OUTPUT', nova_linha_OUTPUT)
+    print ('INPUT', nova_linha_INPUT)
+
+    
+    path = 'C:\Codigos\Engenharia_Software\Doxyfile'
     nova_linha_OUTPUT = 'OUTPUT_DIRECTORY       = '+ nova_linha_OUTPUT 
     nova_linha_INPUT ='INPUT                  = '+ nova_linha_INPUT
-
+    
     with open(path,'r') as f:
         texto=f.readlines()
 
@@ -24,5 +28,6 @@ def Doxyfile_alterar_linha(nova_linha_OUTPUT, nova_linha_INPUT ):
 
             else:
                 f.write(i)
-                
+   
+    return 0            
 #alterar_linha( path = 'Doxyfile.txt',index_linha = '815',nova_linha ='INPUT                  = C:/Users/amarq/OneDrive/Desktop/linux-master')

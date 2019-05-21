@@ -7,7 +7,8 @@ def leprojet(projetos):
         pathprojeto = projetos + '/'+ projeto
         todoscommit.append( pathprojeto)
     
-  #  print('todoscommit', todoscommit)
+    #print('todoscommit', todoscommit)
+    
     return todoscommit
 
 #        for commit in os.listdir(pathprojeto):
