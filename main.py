@@ -14,19 +14,17 @@ def main():
     dir_projeto = param[1]
     dir_result = param[2]
     localpath = param[3]
-    posicao_projeto = param[4]
-    print('------------------------MAIN----------------------------------------------------------')
-    print('commit: ', commit)
-    print('dir_projeto: ', dir_projeto)
-    print('dir_resultado: ', localpath)
-    print ('posicao_projeto: ', posicao_projeto)
-    print('------------------PARSER----------------------------------------------------------------')
-    parser(commit, dir_projeto, dir_result, localpath, posicao_projeto)
-#    with open("c.csv", 'w', newline='') as csvfile:
-#            spamwriter = csv.writer(csvfile, delimiter=';')
-#            spamwriter.writerow(['TESTE']) # escreve st
-  
+    nome_projeto = param[4]
+  #  print('------------------------MAIN----------------------------------------------------------')
+   # print('commit: ', commit)
+   # print('dir_projeto: ', dir_projeto)
+   # print('dir_resultado: ', dir_result)
+   # print('local_path: ', localpath)
+   # print ('posicao_projeto: ', nome_projeto)
+   # print('------------------PARSER----------------------------------------------------------------')
  
+    parser(commit, dir_projeto, dir_result, localpath, nome_projeto)
+#
 #-----------------------------------------------------
 if __name__ == '__main__':
     main()

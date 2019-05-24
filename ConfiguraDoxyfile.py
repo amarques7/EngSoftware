@@ -5,13 +5,13 @@
 import re 
 import os
 
-def Doxyfile_alterar_linha(nova_linha_OUTPUT, nova_linha_INPUT ):
+def Doxyfile_alterar_linha(nova_linha_OUTPUT, nova_linha_INPUT, localpath ):
 
-    print('OUTPUT', nova_linha_OUTPUT)
-    print ('INPUT', nova_linha_INPUT)
-
+    #print('OUTPUT', nova_linha_OUTPUT)
+    #print ('INPUT', nova_linha_INPUT)
+    #print('localpath: ', localpath)
     
-    path = 'C:\Codigos\Engenharia_Software\Doxyfile'
+    path = localpath + 'Doxyfile'
     nova_linha_OUTPUT = 'OUTPUT_DIRECTORY       = '+ nova_linha_OUTPUT 
     nova_linha_INPUT ='INPUT                  = '+ nova_linha_INPUT
     
@@ -30,4 +30,3 @@ def Doxyfile_alterar_linha(nova_linha_OUTPUT, nova_linha_INPUT ):
                 f.write(i)
    
     return 0            
-#alterar_linha( path = 'Doxyfile.txt',index_linha = '815',nova_linha ='INPUT                  = C:/Users/amarq/OneDrive/Desktop/linux-master')

@@ -4,7 +4,7 @@ import os
 def leprojet(projetos):
     todoscommit=[]
     for projeto in os.listdir(projetos):
-        pathprojeto = projetos + '/'+ projeto
+        pathprojeto = projetos +  projeto
         todoscommit.append( pathprojeto)
     
     #print('todoscommit', todoscommit)
