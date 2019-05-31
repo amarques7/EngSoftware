@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
 
 def deletatodos(dir_arq):
@@ -6,7 +9,3 @@ def deletatodos(dir_arq):
       for item in test:
         if  item.endswith(".dot"):
               os.unlink(os.path.join(dir_arq, item))
-
-
-
-#delete('c:/Users/amarq/OneDrive/Desktop/documentacao/latex')

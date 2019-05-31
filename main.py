@@ -1,11 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import sys
-import csv
 
-#sys.path.append("C:\Codigos\Engenharia_Software")
-
-#import teste
-from teste import teste
 from Parser import parser   
+from ConfiguraDoxyfile  import Doxyfile_alterar_linha
 
 def main():
     param = sys.argv[1:]
@@ -15,17 +13,10 @@ def main():
     dir_result = param[2]
     localpath = param[3]
     nome_projeto = param[4]
-  #  print('------------------------MAIN----------------------------------------------------------')
-   # print('commit: ', commit)
-   # print('dir_projeto: ', dir_projeto)
-   # print('dir_resultado: ', dir_result)
-   # print('local_path: ', localpath)
-   # print ('posicao_projeto: ', nome_projeto)
-   # print('------------------PARSER----------------------------------------------------------------')
- 
+
+   # Doxyfile_alterar_linha(dir_result + nome_projeto, dir_projeto + nome_projeto, "C:\Users\amarq\eclipse-workspace\ParseLine")    
     parser(commit, dir_projeto, dir_result, localpath, nome_projeto)
-#
+
 #-----------------------------------------------------
 if __name__ == '__main__':
     main()
-    #teste()

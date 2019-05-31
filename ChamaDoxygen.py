@@ -5,16 +5,7 @@ import os
 import subprocess
 
 def doxygen_Ex(localpath):
-        
-  #path = (localpath + 'Excut_Dox.cmd')
-  # print ("locapath: ", localpath)
-    
-   # print(os.startfile(path))
 
-   # print(os.getpid())
-    #r = subprocess.call([localpath + "Excut_Dox.cmd", "-h"])
-   r = subprocess.call(["Doxygen", localpath + "Doxyfile"])
- #  print('r: ',r)
-  # print('localpath :', localpath)
-
-   return r
+  r = subprocess.call(["Doxygen.exe", localpath + "Doxyfile"])
+  print( "R: ", r)
+  return r
