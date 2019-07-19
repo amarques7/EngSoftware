@@ -19,10 +19,11 @@ from DeletaPasta import deletapasta
 def parser(nomedocommit, dir_projeto, dir_result, localpath, nome_projeto):
 
     caminhoRaiz = leprojet(dir_projeto)
-   #Doxyfile_alterar_linha(dir_result + nome_projeto, dir_projeto + nome_projeto, localpath)
-   # r = doxygen_Ex(localpath)
+
+    print("entrei")
     r=0
     while r == 0:
+        print("entreiwile")
         delete(dir_result + nome_projeto + '/latex')
         
         with open( dir_result + nome_projeto + '/'+ nomedocommit +".csv", 'w', newline='') as csvfile:
@@ -30,7 +31,8 @@ def parser(nomedocommit, dir_projeto, dir_result, localpath, nome_projeto):
                 spamwriter.writerow(['PROJETO','COMMIT','ARQUIVO','CHAMADOR', ' CHAMADO']) # escreve st
                 
         for nomearquivo in os.listdir(dir_result + nome_projeto +'/latex'):
-            if nomearquivo[-3:] != 'dot':               
+            print("entrei for")
+            if nomearquivo[-3:] != 'dot': 
                 continue            
             relation = {
                 'Node': {
@@ -40,6 +42,7 @@ def parser(nomedocommit, dir_projeto, dir_result, localpath, nome_projeto):
                     
                 ]
             }
+         
             arq = open(dir_result + nome_projeto + '/latex/'+ nomearquivo, 'r')
             texto2 = arq.readlines()  
 
@@ -75,7 +78,8 @@ def parser(nomedocommit, dir_projeto, dir_result, localpath, nome_projeto):
                #     z += 1
                                 
             #print ("\n ")            
-            #salvando no arvivo csv   
+            #salvando no arvivo csv 
+            nomearquivo = nomearquivo[:-46]
             with open(dir_result + nome_projeto + '/'+ nomedocommit +".csv", 'a', newline='') as csvfile:
                 spamwriter = csv.writer(csvfile, delimiter=';')
                 for x in relation ['correlacao']:
@@ -84,5 +88,5 @@ def parser(nomedocommit, dir_projeto, dir_result, localpath, nome_projeto):
                     break               
             arq.close()
         break
-    deletatodos(dir_result + nome_projeto + '/latex')
-    deletapasta(dir_result + nome_projeto)
+  #  deletatodos(dir_result + nome_projeto + '/latex')
+   # deletapasta(dir_result + nome_projeto)
